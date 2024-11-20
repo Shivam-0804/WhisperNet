@@ -1,0 +1,26 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/css/all.min.css")
+    link(rel="stylesheet" href="/css/fontawesome.min.css")
+    link(rel="stylesheet" href="/style.css")
+    link(rel="icon" href="/img/logo.png")
+    title whispernet | user
+  body
+    .login-container
+      .form-container
+        .img-side
+          p#p
+            i.fa-solid.fa-quote-left
+            | In a world where privacy matters, whispernet empowers you to share your secrets and ideas without fear.
+            br
+            | Connect boldly, communicate freely, and let your voice be heard securely.
+            i.fa-solid.fa-quote-right
+        .form
+          block content
+            h1 placeholder
+
+    script(src="/socket.io/socket.io.js")
+    script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+    script(src="/user.js")

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./img/logo.png" />
+    <title>whispernet | user</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="form-container">
+        <div class="img-side">
+          <p id="p">
+            <i class="fa-solid fa-quote-left"></i>In a world where privacy
+            matters, whispernet empowers you to share your secrets and ideas
+            without fear.
+            <br />
+            Connect boldly, communicate freely, and let your voice be heard
+            securely.<i class="fa-solid fa-quote-right"></i>
+          </p>
+        </div>
+        <div class="form">
+          <h1>
+            <span id="s-login" class="s-color">Login</span>|<span id="s-signup"
+              >SignUp</span
+            >
+          </h1>
+          <form id="loginForm">
+            <div class="input-field">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                required
+                placeholder="Email/Username"
+              />
+            </div>
+            <div class="input-field">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="Password"
+              />
+            </div>
+            <button type="submit" class="btn lbtn">Login</button>
+          </form>
+
+          <form id="signupForm" class="hide">
+            <div class="input-field">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                required
+                placeholder="Choose a username"
+              />
+            </div>
+            <div class="input-field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Email"
+              />
+            </div>
+            <div class="input-field">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your Name"
+              />
+            </div>
+            <div class="input-field">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="Create a password"
+              />
+            </div>
+            <div class="input-field">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                required
+                placeholder="Confirm your password"
+              />
+            </div>
+            <button type="submit" class="btn lbtn">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="user.js"></script>
+  </body>
+</html>

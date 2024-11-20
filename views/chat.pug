@@ -1,0 +1,75 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+    link(rel="stylesheet", href="/css/all.min.css")
+    link(rel="stylesheet", href="/css/fontawesome.min.css")
+    link(rel="stylesheet", href="/style.css")
+    title WhisperNet
+  body
+    .main_body
+      .chat_options
+        .main
+          ul
+            li#main_back
+              i.fa-solid.fa-arrow-left
+            li
+              div
+                img(src="./img/logo.png", alt="")
+                div whispernet
+
+        .nav_bar
+          span
+            i.fa-solid.fa-magnifying-glass
+          input(type="search", placeholder="Start new chat" id="search")
+          button#add + Add
+
+        .people_option
+            each contact in contacts
+                .options(chatId=`${contact.chatId}` receiverId=`${contact.contactId._id}`)
+                  ul
+                    li
+                      img(src=`${contact.contactId.imagePath}`)
+                    li
+                      div= contact.contactId.name
+                      div(id="username")=  contact.contactId.user_name
+                    li#online.hide
+                      i.fa-solid.fa-circle
+                    li.menu
+                      i.fa-solid.fa-ellipsis
+                  .dropdown.hide
+                    ul
+                      li#chat
+                        i.fa-regular.fa-comment
+                        |  Chat
+                      li#remove
+                        i.fa-solid.fa-trash
+                        |  Remove
+      .chat_box
+        .bg-img
+        .detail_box.hide
+          ul
+            li#back
+              i.fa-solid.fa-arrow-left
+            li
+              img(src="./userImg/cavin_1.jpg", alt="")
+            li
+              div Alice
+              div.status.online
+                i.fa-solid.fa-circle
+                | Online
+
+        .display_box
+        .send_box
+          .attach_doc
+            i.fa-solid.fa-paperclip
+          .message
+            input(type="text", id="message", placeholder="Message")
+          .send
+            div
+              i.fa-solid.fa-paper-plane
+    script(src="/socket.io/socket.io.js") 
+    script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js") 
+    script(src="/script.js")

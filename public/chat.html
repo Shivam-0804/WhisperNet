@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+    </style>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>WhisperNet</title>
+  </head>
+  <body>
+    <div class="main_body">
+      <div class="chat_options">
+        <div class="main">
+          <ul>
+            <li id="main_back"><i class="fa-solid fa-arrow-left"></i></li>
+            <li>
+              <div>
+                <img src="./img/logo.png" alt="" />
+                <div>whispernet</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="nav_bar">
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+          <input type="search" id="search" placeholder="Start new chat" />
+          <button id="add">+ Add</button>
+        </div>
+        <div class="people_option">
+          <div class="options">
+            <ul>
+              <li><img src="userImg/alice_1.jpg" alt="" /></li>
+              <li>
+                <div>Alice</div>
+                <div id="username">alice_1</div>
+              </li>
+              <li id="online" class="">
+                <i class="fa-solid fa-circle"></i>
+              </li>
+              <li class="menu"><i class="fa-solid fa-ellipsis"></i></li>
+            </ul>
+            <div class="dropdown">
+              <ul>
+                <li id="chat"><i class="fa-regular fa-comment"></i>  Chat</li>
+                <li id="remove"><i class="fa-solid fa-trash"></i>  Remove</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat_box">
+        <div class="bg-img"></div>
+        <div class="detail_box">
+          <ul>
+            <li id="back"><i class="fa-solid fa-arrow-left"></i></li>
+            <li><img src="./userImg/cavin_1.jpg" alt="" /></li>
+            <li>
+              <div>Alice</div>
+              <div class="status online">
+                <i class="fa-solid fa-circle"></i> Online
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="display_box">
+          <div class="msg_sent">
+            <div class="msg">hello</div>
+            <div class="msg_time">9:30pm</div>
+          </div>
+          <div class="msg_received">
+            <div class="msg">byeee</div>
+            <div class="msg_time">9:30pm</div>
+          </div>
+        </div>
+        <div class="send_box">
+          <div class="attach_doc"><i class="fa-solid fa-paperclip"></i></div>
+          <div class="message">
+            <input type="text" id="message" placeholder="Message" />
+          </div>
+          <div class="send">
+            <div><i class="fa-solid fa-paper-plane"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

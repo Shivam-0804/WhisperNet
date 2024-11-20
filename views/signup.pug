@@ -1,0 +1,24 @@
+extends user 
+
+block content 
+    h1
+        span#s-login Login
+        | |
+        span#s-signup.s-color SignUp
+    form#signupForm
+        .input-field
+          label(for="username") Username
+          input(type="text" id="username" name="username" required placeholder="Choose a username")
+        .input-field
+          label(for="email") Email
+          input(type="email" id="email" name="email" required placeholder="Email")
+        .input-field
+          label(for="name") Name
+          input(type="text" id="name" name="name" required placeholder="Your Name")
+        .input-field
+          label(for="password") Password
+          input(type="password" id="password" name="password" required placeholder="Create a password")
+        .input-field
+          label(for="confirmPassword") Confirm Password
+          input(type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password")
+        button.btn.lbtn(type="submit") Sign Up

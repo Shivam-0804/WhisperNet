@@ -1,0 +1,30 @@
+
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+    link(rel="stylesheet", href="/css/all.min.css")
+    link(rel="stylesheet", href="/css/fontawesome.min.css")
+    link(rel="stylesheet", href="/style.css")
+    link(rel="icon", href="/img/logo.png")
+    title WhisperNet | Home
+  body
+    .header
+      .logo
+        img(src="/img/logo.png", alt="")
+        | whispernet
+      .menu_list
+        ul
+          li#signup Sign up
+          li#login Login
+    .bg
+      .bg-img
+    .container
+      .heading whispernet
+      .tagline Whisper your secrets, shout your ideas—securely.
+      button#start Start 
+        i.fa-solid.fa-arrow-right
+    script(src="/socket.io/socket.io.js")
+    script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+    script(src="/user.js")
