@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const http = require("http");
+const path = require("path"); 
 const { Server } = require("socket.io");
 const cookieParser = require("cookie-parser");
 const app = require("./app"); // Importing the app instance
