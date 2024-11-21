@@ -18,9 +18,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
-app.use("/", (req, res) => {
-  res.render("base");
-});
 app.use("/chat", authController.protect, chatRouter);
 app.use("/user/login", (req, res) => {
   res.render("login");
@@ -29,6 +26,9 @@ app.use("/user/signup", (req, res) => {
   res.render("signup");
 });
 app.use("/api", userRoute);
+app.get("/", (req, res) => {
+  res.render("base");
+});
 app.all("*", (req, res, next) => {
   next(new AppError(`Can't  find ${req.originalUrl} on this server!`, 404));
 });
