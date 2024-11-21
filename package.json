@@ -4,7 +4,7 @@
   "description": "secured message application",
   "main": "app.js",
   "scripts": {
-    "postinstall": "chmod +x ./node_modules/.bin/*"
+    "postinstall": "chmod +x ./node_modules/.bin/*",
     "dev": "start server.js",
     "start": "npx nodemon server.js",
     "test": "echo 'No test specified' && exit 0"
