@@ -4,8 +4,9 @@
   "description": "secured message application",
   "main": "app.js",
   "scripts": {
-    "test": "start server.js",
-    "start": "nodemon server.js"
+    "dev": "start server.js",
+    "start": "nodemon server.js",
+    "test": "echo 'No test specified' && exit 0"
   },
   "author": "Shivam Chaudhary",
   "license": "ISC",
