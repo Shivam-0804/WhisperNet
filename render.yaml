@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: whispernet-server
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    branch: main
+    rootDir: .
+    autoDeploy: true
