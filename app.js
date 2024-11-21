@@ -18,11 +18,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
-
-app.get('/', (req, res) => {
-  res.send("Hello from Express on Vercel!");
-});
-
 app.use("/chat", authController.protect, chatRouter);
 app.use("/user/login", (req, res) => {
   res.render("login");
