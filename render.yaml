@@ -4,7 +4,7 @@ services:
     env: node
     plan: free
     buildCommand: npm install
-    startCommand: npm run start
+    startCommand: npm start
     branch: main
     rootDir: .
     autoDeploy: true
