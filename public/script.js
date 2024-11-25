@@ -185,7 +185,7 @@ addButton.addEventListener("click", async function (e) {
 
 const home = document.getElementById("main_back");
 home.addEventListener("click", function () {
-  window.location.href = "/home";
+  window.location.href = "/";
 });
 
 const options = document.querySelectorAll(".options");
