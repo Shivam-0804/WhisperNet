@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .then((response) => {
             console.log("Response data:", response.data);
             if (response.data.status === "success") {
-              window.location.href = "/home";
+              window.location.href = "/";
             } else {
               alert("Invalid Details. Please try again.");
             }
